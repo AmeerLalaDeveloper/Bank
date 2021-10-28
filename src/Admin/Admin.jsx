@@ -59,12 +59,6 @@ export default function Admin({ loggedUser, users }) {
 		history.push("/")
 	
 	}
-		let history=useHistory();
-		if (Object.keys(user).length === 0) {
-		history.push('/login');
-		return <React.Fragment />;
-	}
-
 	return (
 		<div className="final">
 			{console.log(input)}

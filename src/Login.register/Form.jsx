@@ -6,7 +6,7 @@ export default function Form({ user, usersProp, handelLoginCB }) {
 	const [ message, setMessage ] = useState('');
 	const [ users, setUsers ] = useState(usersProp);
 
-
+	console.log(user);
 
 	useEffect(
 		() => {
