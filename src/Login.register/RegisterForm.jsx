@@ -32,7 +32,7 @@ export default function RegisterForm({usersProp,handelRegisterCB}) {
             password: input.password,
             city:city,
             isActive: true,
-            creditFrame: 0,
+            creditFrame: 1000,
             frameSpent: 0,
             admin:false
         })
