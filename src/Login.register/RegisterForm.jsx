@@ -57,14 +57,14 @@ export default function RegisterForm({usersProp,handelRegisterCB}) {
                 const success=async (data)=>{
                     const city=(await getLocation(data.coords.latitude,data.coords.longitude)).data.city;
                     const temp=returnObj(city);
-                    postUsers(temp);
-                    handelRegisterCB(temp)
+                   const temp2=await postUsers(temp);
+                    await handelRegisterCB(temp2.data)
                     history.push('/');
                 }
                 const fail=async()=>{
                     const temp=returnObj("");
-                    postUsers(temp);
-                    handelRegisterCB(temp);
+                    const temp2=await postUsers(temp);
+                    await handelRegisterCB(temp2.data)
                     history.push('/');
                 }
                 navigator.geolocation.getCurrentPosition(success,fail)
