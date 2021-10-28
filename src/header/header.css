@@ -1,0 +1,195 @@
+.header {
+	width: 100%;
+	background: var(--primary);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.header > nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header > nav > div > ul {
+	display: flex;
+	list-style: none;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 40vw;
+}
+.header a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+.header li {
+	text-align: center;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.logo {
+	background: url("../Img/logo\ AR2.png") no-repeat center center/cover;
+	width: 110px;
+	height: 65px;
+	cursor: pointer;
+	border-radius: 10px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.login {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 10%;
+}
+a {
+	transition: all 0.3s;
+}
+a {
+	padding: 1rem;
+	border-radius: 1rem;
+}
+.header a:hover {
+	background: white;
+	color: var(--primary);
+}
+.header .logo-link:hover{
+  background: none;
+}
+
+.logo-ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 50%;
+}
+.logo-link {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.logo-link:hover {
+	background: none;
+	color: none;
+}
+
+/* ======================== */
+.container-menu {
+	display: inline-block;
+	cursor: pointer;
+  z-index: 110;
+  position: fixed;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
+}
+.hamburger nav{
+  z-index: 100;
+
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background: rgba(255, 255, 255);
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  
+}
+.hamburger nav>div{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburger nav >div ul{
+    width: 50%;
+    list-style: none;
+    height: 15vh;
+
+}
+.hamburger .login{
+  justify-self: flex-end ;
+  
+}
+.hamburger nav ul{
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height:20%;
+}
+
+.hamburger a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: .4rem;
+  color: var(--primary);
+
+}
+.hamburger nav div .login,
+.hamburger .login a{
+  width: 70%;
+  text-align: center;
+  margin: 1rem;
+}
+.hamburger a:hover{
+  background: var(--primary);
+  color: white;
+  padding: .8rem;
+}
+.hamburger nav div .logo a{
+  background: none;
+}
+.logo-link-container{
+  display: flex;
+  height: 40%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.none{
+  left: -100% !important;
+}
+.hamburger{
+  z-index: 10;
+  transition: all .5s;
+  text-align: center;
+  left: 0;
+  position: fixed;
+}
+.ham-responsive{
+z-index: 1000;
+  display: none;
+  top: 0;
+  position: fixed;
+}
+@media (max-width:800px) {
+    .ham-responsive{
+      display: unset;
+    }
+    .header{
+      display: none;
+    }
+}

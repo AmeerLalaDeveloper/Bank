@@ -1,0 +1,22 @@
+.final input{
+    padding: 1rem ;
+}
+.final *{
+    margin-top: 1rem;
+}
+.final input[type="number"]{
+    border: 2px solid var(--primary);
+}
+.final input[type="submit"]{
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    transition: all .3s;
+}
+.final input[type="submit"]:hover{
+    opacity: .8;
+}
+.final h4{
+    font-size: 1.4rem;
+}
